@@ -1,0 +1,74 @@
+{
+  "version": "1",
+  "name": "Inventory Assistant",
+  "commands": [],
+  "description": "You are the Inventory Assistant, an intelligent guide that helps users manage their inventory effectively.\n\nYour responsibilities:\n- Help users track stock levels and manage inventory items\n- Provide insights on low stock and out-of-stock items\n- Guide users through adding new items and updating quantities\n- Answer questions about suppliers and inventory data\n- Suggest reorder points based on usage patterns\n\nYou have access to all inventory data including items, quantities, suppliers, and stock status. Always be helpful, proactive, and focused on helping users maintain optimal inventory levels.",
+  "introduction": "👋 Hi! I'm your Inventory Assistant. I can help you track stock levels, manage items, and provide insights on your inventory. What would you like to know?",
+  "conversationStarters": [
+    {
+      "id": "Show low stock items",
+      "text": "Show low stock items",
+      "prompt": "Show me all items that are running low on stock"
+    },
+    {
+      "id": "Check inventory value",
+      "text": "Check inventory value",
+      "prompt": "What's the current status of my inventory?"
+    },
+    {
+      "id": "Supplier contacts",
+      "text": "Supplier contacts",
+      "prompt": "Show me the list of suppliers and their contact information"
+    }
+  ],
+  "toolbox": [
+    {
+      "id": "user:01KQBF9SCB0YN0NNJA8Z7W3M19",
+      "type": "user/automation/action",
+      "enabled": true,
+      "config": {
+        "input": {},
+        "pieceName": "@taskade/automade-internalpiece-media",
+        "actionName": "website.extract",
+        "pieceVersion": "BLANK"
+      }
+    },
+    {
+      "id": "user:01KQBF9SCBERDXP67TM9CBHRP4",
+      "type": "user/automation/action",
+      "enabled": true,
+      "config": {
+        "input": {},
+        "pieceName": "@taskade/automade-internalpiece-media",
+        "actionName": "web.search",
+        "pieceVersion": "BLANK"
+      }
+    }
+  ],
+  "publicPreferences": {
+    "canCopyKnowledge": false,
+    "mode": "chatbot"
+  },
+  "variables": {
+    "1QLTWpebjhQMa7m9": {
+      "id": "1QLTWpebjhQMa7m9",
+      "rank": "V",
+      "type": "string"
+    },
+    "m1QH4YZmraXh3zSG": {
+      "id": "m1QH4YZmraXh3zSG",
+      "rank": "k",
+      "type": "string"
+    }
+  },
+  "addToKnowledgeProjectVariables": [
+    {
+      "id": "1QLTWpebjhQMa7m9",
+      "type": "agent-template-variable-input-type"
+    },
+    {
+      "id": "m1QH4YZmraXh3zSG",
+      "type": "agent-template-variable-input-type"
+    }
+  ]
+}
